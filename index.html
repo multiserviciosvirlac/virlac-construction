@@ -4,67 +4,121 @@
     <meta charset="UTF-8">
     <title>Virlac Construction S.A.</title>
 
-    <!-- ICONO WHATSAPP (Font Awesome) -->
+    <!-- Ícono WhatsApp -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background: #f5f5f5;
+            background: #f2f4f2;
         }
 
         header {
             background: #0b2c4d;
             color: white;
-            padding: 80px 20px;
             text-align: center;
+            padding: 60px 20px;
+        }
+
+        header img {
+            width: 180px;
+            margin-bottom: 15px;
         }
 
         header h1 {
-            margin: 0;
-            font-size: 42px;
+            font-size: 38px;
+            margin: 10px 0;
         }
 
         header p {
             font-size: 20px;
+            margin: 0;
         }
 
-        /* BOTÓN WHATSAPP */
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .contact {
+            background: #0b2c4d;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        footer {
+            background: #000;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
         .whatsapp {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: #25D366;
+            background: #25D366;
             color: white;
-            font-size: 36px;
-            padding: 16px;
+            font-size: 32px;
+            padding: 15px;
             border-radius: 50%;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
             z-index: 9999;
         }
-       
-.logo {
-    width: 180px;
-    margin-bottom: 20px;
-}
-
     </style>
 </head>
 
 <body>
 
 <header>
-   <header>
-    <img src="logo VC.jpg" alt="Virlac Construction" class="logo">
+    <img src="logo.jpg" alt="Virlac Construction">
     <h1>VIRLAC CONSTRUCTION S.A.</h1>
-    <p>Construcción y soluciones energéticas</p>
+    <p>Construcción, infraestructura y soluciones energéticas</p>
 </header>
+
+<section>
+    <h2>Nuestros Servicios</h2>
+    <div class="services">
+        <div class="box">Construcción y obras civiles</div>
+        <div class="box">Movimiento de tierra</div>
+        <div class="box">Infraestructura y acueductos</div>
+        <div class="box">Instalación de paneles solares</div>
+        <div class="box">Mantenimiento y asesoría técnica</div>
+        <div class="box">Proyectos industriales</div>
+    </div>
+</section>
+
+<section class="contact">
+    <h2>Contáctanos</h2>
+    <p>📞 (+507) 6858 8910</p>
+    <p>📞 (+507) 6973 9682</p>
+</section>
+
+<footer>
+    © 2024 Virlac Construction S.A. — Todos los derechos reservados
+</footer>
+
 <a href="https://wa.me/50768588910" class="whatsapp" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-         alt="WhatsApp"
-         style="width:40px;height:40px;">
+    <i class="fab fa-whatsapp"></i>
 </a>
 
 </body>
