@@ -15,10 +15,13 @@
         }
 
         header {
-            background: #0b2c4d;
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
+    background: 
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("fondo.jpg") center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+
         }
 
         header img {
@@ -71,6 +74,11 @@
             padding: 15px;
         }
 
+        .logo {
+    width: 200px;
+    margin-bottom: 20px;
+        }
+
         .whatsapp {
             position: fixed;
             bottom: 20px;
@@ -90,7 +98,7 @@
 <body>
 
 <header>
-    <img src="logo.jpg" alt="Virlac Construction">
+    <img src="logo.jpg" alt="Virlac Construction" class="logo">
     <h1>VIRLAC CONSTRUCTION S.A.</h1>
     <p>Construcción, infraestructura y soluciones energéticas</p>
 </header>
