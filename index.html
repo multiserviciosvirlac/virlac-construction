@@ -61,11 +61,29 @@
         }
 
         .contact {
-            background: #0b2c4d;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
+    position: relative;
+    background: url('logoinferior.jpg') center center / contain no-repeat;
+    background-color: #0b0b0b;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.contact::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+.contact p {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0;
+}
 
         footer {
             background: #000;
@@ -116,10 +134,12 @@
 </section>
 
 <section class="contact">
-    <h2>Contáctanos</h2>
-    <p>📞 (+507) 6858 8910</p>
-    <p>📞 (+507) 6973 9682</p>
+    <div class="overlay">
+        <p>📞 (+507) 6858 8910</p>
+        <p>📞 (+507) 6973 9682</p>
+    </div>
 </section>
+
 
 <footer>
     © 2024 Virlac Construction S.A. — Todos los derechos reservados
