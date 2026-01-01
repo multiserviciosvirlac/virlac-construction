@@ -162,6 +162,27 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
             z-index: 9999;
         }
+.slider {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    margin: 60px 0;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
     </style>
 </head>
 
@@ -179,6 +200,15 @@
     <p class="intro">
         Somos una empresa 100% panameña, fundada en el año 2024, teniendo como objetivo la asesoría y gestión de proyectos, diseño y construcción de obras civiles, alquiler e importación de todo tipo de equipo, electricidad, mecánica y mantenimiento industrial, suministro e instalación de equipos fotovoltaicos.
     </p>
+<section class="slider">
+    <img src="proyecto1.jpg" class="slide active">
+    <img src="proyecto2.jpg" class="slide">
+    <img src="proyecto3.jpg" class="slide">
+<img src="proyecto4.jpg" class="slide">
+<img src="proyecto5.jpg" class="slide">
+<img src="proyecto6.jpg" class="slide">
+<img src="proyecto7.jpg" class="slide">
+</section>
 
     <div class="info-grid">
 
@@ -228,6 +258,17 @@
 <a href="https://wa.me/50768588910" class="whatsapp" target="_blank">
     <i class="fab fa-whatsapp"></i>
 </a>
+
+<script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+}, 4000);
+</script>
 
 </body>
 </html>
