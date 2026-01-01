@@ -66,28 +66,21 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    height: 300px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding-bottom: 30px;
-}
-
-.contact::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+    padding: 80px 20px;
 }
 
 .contact .overlay {
-    position: relative;
-    z-index: 2;
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    text-align: center;
+}
+
+.contact p {
     color: white;
     font-size: 22px;
     font-weight: bold;
-    text-align: center;
 }
+
 
         footer {
             background: #000;
@@ -139,9 +132,10 @@
 
 <section class="contact">
     <div class="overlay">
-        <p>📞 (+507) 6858 8910</p>
-        <p>📞 (+507) 6973 9682</p>
-    </div>
+    <p>📞 (+507) 6858 8910</p>
+    <p>📞 (+507) 6973 9682</p>
+</div>
+
 </section>
 
 
