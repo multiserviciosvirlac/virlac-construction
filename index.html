@@ -8,103 +8,110 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f2f4f2;
-        }
+/* ===== ESTILOS GENERALES ===== */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f4f2;
+}
 
-        header {
-    background: 
+/* ===== ENCABEZADO ===== */
+header {
+    background:
         linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-        url("fondo.jpg") center/cover no-repeat;
+        url("fondo.jpg") center/80% no-repeat;
     color: white;
     text-align: center;
     padding: 120px 20px;
+}
 
-        }
+header img {
+    width: 180px;
+    margin-bottom: 15px;
+}
 
-        header img {
-            width: 180px;
-            margin-bottom: 15px;
-        }
+header h1 {
+    font-size: 38px;
+    margin: 10px 0;
+}
 
-        header h1 {
-            font-size: 38px;
-            margin: 10px 0;
-        }
+header p {
+    font-size: 20px;
+}
 
-        header p {
-            font-size: 20px;
-            margin: 0;
-        }
+/* ===== SECCIÓN QUIÉNES SOMOS ===== */
+.quienes-somos {
+    position: relative;
+    height: 550px;
+    background-size: 80%;
+    background-position: center;
+    animation: fondoSlider 18s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+}
 
-        .info-section {
-    padding: 80px 20px;
-    background: #f7f7f7;
+/* Animación de fondo */
+@keyframes fondoSlider {
+    0% {
+        background-image: url("proyecto1.jpg");
+    }
+    33% {
+        background-image: url("proyecto3.jpg");
+    }
+    66% {
+        background-image: url("proyecto5.jpg");
+    }
+    100% {
+        background-image: url("proyecto7.jpg");
+    }
+}
+
+/* Oscurece el fondo para leer mejor */
+.quienes-somos::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+/* Contenido */
+.quienes-somos .contenido {
+    position: relative;
+    color: white;
     text-align: center;
+    max-width: 1100px;
+    z-index: 2;
 }
 
-.info-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #1a1a1a;
-}
-
-.info-section .intro {
-    max-width: 800px;
-    margin: 0 auto 50px;
-    font-size: 18px;
-    color: #555;
-}
-
+/* BLOQUES DE INFORMACIÓN */
 .info-grid {
     display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
     justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .info-box {
-    background: white;
+    background: rgba(0, 0, 0, 0.65);
     padding: 30px;
-    width: 280px;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    text-align: center;
+    border-radius: 15px;
+    width: 300px;
 }
 
 .info-box h3 {
+    font-size: 22px;
     margin-bottom: 15px;
-    color: #0b2c4d;
 }
 
-.info-box ul {
-    list-style: none;
-    padding: 0;
+.info-box p {
+    font-size: 17px;
+    line-height: 1.6;
 }
 
-.info-box li {
-    padding: 6px 0;
-    font-size: 16px;
-}
-
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
-
-        .box {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-            text-align: center;
-            font-weight: 600;
-        }
-
-    .contact {
+/* ===== CONTACTO ===== */
+.contact {
     position: relative;
     background-image: url("logoinferior.jpg");
     background-size: cover;
@@ -130,99 +137,23 @@
 .contact a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
 }
 
-.contact a:hover {
-    text-decoration: underline;
-}
-
-        footer {
-            background: #000;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-
-        .logo {
-    width: 200px;
-    margin-bottom: 20px;
-        }
-
-        .whatsapp {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25D366;
-            color: white;
-            font-size: 32px;
-            padding: 15px;
-            border-radius: 50%;
-            text-decoration: none;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            z-index: 9999;
-        }
-.slider {
-    position: relative;
-    width: 100%;
-    height: 350px;
-    overflow: hidden;
-    margin: 60px 0;
-}
-
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out;
-}
-
-.slide.active {
-    opacity: 1;
-}
-.quienes-somos {
-    position: relative;
-    background-image: url("proyecto1.jpg");
-    background-size: 70%;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 90px 20px;
-}
-
-.quienes-somos::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.65);
-}
-
-.quienes-somos .contenido {
-    position: relative;
-    z-index: 2;
-    max-width: 1000px;
-    margin: auto;
+/* ===== WHATSAPP ===== */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
     color: white;
-    text-align: center;
+    font-size: 32px;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
+</style>
 
-.info-grid {
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 40px;
-}
-
-.info-box {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 25px;
-    border-radius: 12px;
-    width: 280px;
-}
-
-    </style>
 </head>
 
 <body>
