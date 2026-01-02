@@ -182,6 +182,45 @@
 .slide.active {
     opacity: 1;
 }
+.quienes-somos {
+    position: relative;
+    background-image: url("proyecto1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 90px 20px;
+}
+
+.quienes-somos::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.quienes-somos .contenido {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    margin: auto;
+    color: white;
+    text-align: center;
+}
+
+.info-grid {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.info-box {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 25px;
+    border-radius: 12px;
+    width: 280px;
+}
 
     </style>
 </head>
@@ -194,50 +233,41 @@
     <p>Construcción, infraestructura y soluciones energéticas</p>
 </header>
 
-<section class="info-section">
+<section class="quienes-somos">
+    <div class="contenido">
+        <h2>¿Quiénes Somos?</h2>
+        <p>
+            Somos una empresa 100% panameña, dedicada a la construcción, infraestructura y servicios
+            técnicos, comprometida con la calidad, seguridad y el desarrollo sostenible.
+        </p>
 
-    <h2>¿Quiénes Somos?</h2>
-    <p class="intro">
-        Somos una empresa 100% panameña, fundada en el año 2024, teniendo como objetivo la asesoría y gestión de proyectos, diseño y construcción de obras civiles, alquiler e importación de todo tipo de equipo, electricidad, mecánica y mantenimiento industrial, suministro e instalación de equipos fotovoltaicos.
-    </p>
-<section class="slider">
-    <img src="proyecto1.jpg" class="slide active">
-    <img src="proyecto2.jpg" class="slide">
-    <img src="proyecto3.jpg" class="slide">
-<img src="proyecto4.jpg" class="slide">
-<img src="proyecto5.jpg" class="slide">
-<img src="proyecto6.jpg" class="slide">
-<img src="proyecto7.jpg" class="slide">
-</section>
+        <div class="info-grid">
+            <div class="info-box">
+                <h3>Misión</h3>
+                <p>
+                    Brindar soluciones eficientes y seguras en construcción y servicios,
+                    cumpliendo altos estándares de calidad.
+                </p>
+            </div>
 
-    <div class="info-grid">
+            <div class="info-box">
+                <h3>Visión</h3>
+                <p>
+                    Ser líderes en el sector construcción, destacando por innovación,
+                    compromiso y excelencia operativa.
+                </p>
+            </div>
 
-        <div class="info-box">
-            <h3>Misión</h3>
-            <p>
-                Ser un activo de importancia para nuestros clientes, ejecutando las tareas de estudio, construcción y mantenimiento, así como cualquier otros servicios auxiliares que se requieran, siempre buscando la excelencia.
-            </p>
+            <div class="info-box">
+                <h3>Servicios</h3>
+                <ul>
+                    <li>Construcción y obras civiles</li>
+                    <li>Movimiento de tierra</li>
+                    <li>Infraestructura y mantenimiento</li>
+                    <li>Instalaciones eléctricas</li>
+                </ul>
+            </div>
         </div>
-
-        <div class="info-box">
-            <h3>Visión</h3>
-            <p>
-                Crear sinergia empresarial en la región para juntos colaborar con el desarrollo sostenible, organizado y progresivo del país, fomentando la competitividad y permitiendo el crecimiento, participación y apoyo de todos los sectores.
-            </p>
-        </div>
-
-        <div class="info-box">
-            <h3>Nuestros Servicios</h3>
-            <ul>
-                <li>Construcción y obras civiles</li>
-                <li>Movimiento de tierra</li>
-                <li>Infraestructura y acueductos</li>
-                <li>Instalaciones eléctricas y equipos fotovoltaicos</li>
-                <li>Mantenimiento y asesoría técnica</li>
-                <li>Proyectos industriales</li>
-            </ul>
-        </div>
-
     </div>
 </section>
 
